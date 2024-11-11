@@ -14,3 +14,6 @@ def login(request):
 
 def forgotPassword(request):
     return render(request, 'forgotPassword.html')
+
+def profile(request):
+    return render(request, 'profile.html')

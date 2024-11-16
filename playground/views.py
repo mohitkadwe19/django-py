@@ -20,3 +20,6 @@ def profile(request):
 
 def addProduct(request):
     return render(request, 'addProduct.html')
+
+def viewProduct(request):
+    return render(request, 'viewProduct.html')

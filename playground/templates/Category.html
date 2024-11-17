@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+</head>
+<body>
+    <h1>Category</h1>
+    <p>Category ID: {{ category.id }}</p>
+    <p>Category Name: {{ category.name }}</p>
+    <p>Category Description: {{ category.description }}</p>
+    <p>Category Created At: {{ category.created_at }}</p>
+    <p>Category Updated At: {{ category.updated_at }}</p>
+    <a href="{{ urlFor('category.index') }}">Back to Category List</a>
+    <a href="{{ urlFor('category.edit', { id: category.id }) }}">Edit Category</a>
+    <form action="{{ urlFor('category.delete', { id: category.id }) }}" method="POST">
+        <input type="hidden" name="_METHOD" value="DELETE">
+        <button type="submit">Delete Category</button>
+    </form>
+</body>
+</html>

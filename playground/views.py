@@ -23,3 +23,6 @@ def addProduct(request):
 
 def viewProduct(request):
     return render(request, 'viewProduct.html')
+
+def addCategory(request):
+    return render(request, 'addCategory.html')    
